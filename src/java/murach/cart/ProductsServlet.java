@@ -15,7 +15,7 @@ public class ProductsServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
 
-        String path = getServletContext().getRealPath("/WEB-INF/products.txt");
+        String path = getServletContext().getRealPath("./WEB-INF/products.txt");
         ArrayList<Product> products = ProductIO.getProducts(path);
         session.setAttribute("products", products);
 
